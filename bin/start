@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Checking postgres"
+echo "Checking postgres..."
 pg_ready="$(pg_isready -h localhost -p 5432)"
 if [[ $pg_ready = *"accepting connections"* ]]; then
   echo "postgres is accepting connections on port 5432"
@@ -9,5 +9,5 @@ else
   exit 1
 fi
 
-echo "Starting Phoenix server"
-mix phx.server
+echo -e "\nStarting Phoenix server in DEV..."
+MIX_ENV=dev mix phx.server

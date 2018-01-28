@@ -1,0 +1,15 @@
+#!/bin/bash
+set -a
+env=$1
+
+if [[ env ]]; then
+  echo -e "Sourcing config for $env"
+  . "config/$env"
+  echo "MIX_ENV is set to $MIX_ENV"
+else
+  echo "Enter an env (dev or test)"
+  exit 1
+fi
+
+exit 0
+

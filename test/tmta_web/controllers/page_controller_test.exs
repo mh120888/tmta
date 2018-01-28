@@ -3,6 +3,9 @@ defmodule TmtaWeb.PageControllerTest do
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"
-    assert html_response(conn, 200) =~ "Welcome to Phoenix!"
+    response = html_response(conn, 200)
+    assert response =~ "TMTA"
+    assert response =~ "Helping you keep track of your vacations"
+    assert response =~ "<a href=\"#\" class=\"btn btn-primary\">Add a Trip</a>"
   end
 end
