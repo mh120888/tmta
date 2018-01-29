@@ -1,5 +1,7 @@
-<div class="jumbotron">
-  <h2>TMTA</h2>
-  <p class="lead">Helping you keep track of your vacations.</p>
-  <a href="#" class="btn btn-primary">Add a Trip</a>
+<div class="landing">
+  <div class="welcome">
+    <h1>TMTA</h1>
+    <p class="lead">Helping you keep track of your vacations.</p>
+    <a href="#" class="btn">Add a Trip</a>
+  </div>
 </div>

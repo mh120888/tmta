@@ -1,0 +1,40 @@
+.alert:empty {
+  margin: 0;
+}
+
+.landing {
+  font-family: sans-serif;
+  height: 85vh;
+  text-align: center;
+  min-height: 500px;
+}
+
+.welcome {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+.welcome h1 {
+  font-size: 6em;
+  font-weight: 700;
+}
+
+.welcome .lead {
+  margin: 2em auto;
+  position: relative;
+}
+
+.welcome .lead::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -1.25em;
+  width: 90px;
+  height: 1px;
+  background-color: #333;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
