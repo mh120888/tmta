@@ -15,12 +15,17 @@
   <body>
     <div class="wrapper">
       <div class="navbar-fixed">
-        <nav>
+        <nav class="blue-grey darken-2">
           <div class="nav-wrapper">
-            <a href="#" class="brand-logo">TMTA</a>
+            <a href="<%= page_path(@conn, :index) %>" class="brand-logo">TMTA</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a href="#">Sign In</a></li>
-              <li><a href="#">Sign Up</a></li>
+              <%= if Coherence.current_user_name(@conn) do %>
+              <li>Hello <%= Coherence.current_user_name(@conn) %></li>
+              <li><%= link "Log Out", to: session_path(@conn, :delete), method: "delete" %></li>
+              <% else %>
+              <li><a href="<%= session_path(@conn, :new) %>">Sign In</a></li>
+              <li><a href="<%= registration_path(@conn, :new) %>">Sign Up</a></li>
+              <% end %>
             </ul>
           </div>
         </nav>
