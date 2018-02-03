@@ -1,8 +1,7 @@
-<div class="row form">
-  <div class="col l6 offset-l3 m8 offset-m2 s12">
-    <div class="card">
+<div class="row form justify-content-md-center">
+  <div class="col-sm-12 col-md-9 col-lg-6">
       <%= form_for @changeset, @action, [as: :registration], fn f  -> %>
-        <span class="card-title"><%= @label %></span>
+        <h1><%= @label %></h1>
 
         <%= if @changeset.action do %>
           <div class="alert alert-danger">
@@ -51,9 +50,8 @@
         </div>
 
         <div class="form-group">
-          <%= submit @label, class: "btn waves-effect waves-light" %>
+          <%= submit @label, class: "btn btn-primary" %>
         </div>
       <% end %>
-    </div>
   </div>
 </div>

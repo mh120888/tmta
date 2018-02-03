@@ -18,7 +18,7 @@ defmodule UserSigninTest do
       |> fill_in(text_field("session[email]"), with: "test@example.com")
       |> fill_in(text_field("session[password]"), with: "test")
       |> click(button("Sign In"))
-      |> assert_has(Wallaby.Query.text("Hello Bob Smith"))
+      |> assert_has(Wallaby.Query.text("Bob Smith"))
     end
 
     test "cannot sign in when providing an valid email or password", %{session: session} do
