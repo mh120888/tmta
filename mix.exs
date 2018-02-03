@@ -41,7 +41,8 @@ defmodule Tmta.Mixfile do
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "0.13.1"},
       {:cowboy, "~> 1.0"},
-      {:coherence, "~> 0.5"}
+      {:coherence, "~> 0.5"},
+      {:wallaby, "~> 0.19.2", [runtime: false, only: :test]}
     ]
   end
 

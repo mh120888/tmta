@@ -4,8 +4,9 @@ use Mix.Config
 # you can enable the server option below.
 config :tmta, TmtaWeb.Endpoint,
   http: [port: 4001],
-  server: false
+  server: true
 
+config :tmta, :sql_sandbox, true
 # Print only warnings and errors during test
 config :logger, level: :warn
 
@@ -17,3 +18,5 @@ config :tmta, Tmta.Repo,
   database: "tmta_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+
+config :wallaby, screenshot_on_failure: true
