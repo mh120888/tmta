@@ -19,8 +19,8 @@
           <div class="nav-wrapper">
             <a href="<%= page_path(@conn, :index) %>" class="brand-logo">TMTA</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <%= if Coherence.current_user_name(@conn) do %>
-              <li>Hello <%= Coherence.current_user_name(@conn) %></li>
+              <%= if @current_user do %>
+              <li>Hello <%= @current_user.name %></li>
               <li><%= link "Log Out", to: session_path(@conn, :delete), method: "delete" %></li>
               <% else %>
               <li><a href="<%= session_path(@conn, :new) %>">Sign In</a></li>
